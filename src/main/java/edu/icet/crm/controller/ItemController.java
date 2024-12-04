@@ -24,8 +24,6 @@ public class ItemController {
     public void addItem(@RequestBody Item item) {
         service.addItem(item);
 
-        ;
-
     }
     @PutMapping("/update-item")
     public void updateItem(@RequestBody Item item) {

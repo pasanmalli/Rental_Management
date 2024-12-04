@@ -1,16 +1,19 @@
 package edu.icet.crm.controller;
 
-import edu.icet.crm.dto.Item;
+
 import edu.icet.crm.dto.RentalItem;
-import edu.icet.crm.service.ItemService;
+
 import edu.icet.crm.service.RentalItemService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Service
+
+@RestController
+@RequestMapping("/rental")
+@CrossOrigin
 @RequiredArgsConstructor
 public class RentalController {
 
@@ -21,7 +24,6 @@ public class RentalController {
     public void addRentalItem(@RequestBody RentalItem rentalItem) {
         rentalItemService.addRentalItem(rentalItem);
 
-        ;
 
     }
     @PutMapping("/update-rental-item")

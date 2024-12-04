@@ -21,9 +21,7 @@ public class CustomerController {
 
     @PostMapping("/add-customer")
     public void addCustomer(@RequestBody Customer customer) {
-     service.addCustomer(customer)
-
-     ;
+     service.addCustomer(customer);
 
     }
     @PutMapping("/update-customer")
