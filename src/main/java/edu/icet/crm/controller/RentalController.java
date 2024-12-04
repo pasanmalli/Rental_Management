@@ -31,19 +31,19 @@ public class RentalController {
     }
     @DeleteMapping("/delete-rental-item/{id}")
     public void deleteRentalItem(@PathVariable Integer id) {
-        service.deleteItem(id);
+        rentalItemService.deleteRentalItem(id);
     }
-    @GetMapping("/search-item/{id}")
-    public Item searchItem(@PathVariable Integer id) {
+    @GetMapping("/search-rental-item/{id}")
+    public RentalItem searchRentalItem(@PathVariable Integer id) {
 
-        return service.searchItem(id);
+        return searchRentalItem(id);
 
     }
     @GetMapping("/find-all")
-    public List<Item> getAll() {
+    public List<RentalItem> getAll() {
 
 
-        return service.getAllItem();
+        return rentalItemService.getAllRentalItem();
 
 
     }
