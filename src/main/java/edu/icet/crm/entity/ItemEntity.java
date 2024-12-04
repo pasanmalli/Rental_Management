@@ -11,15 +11,19 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "customer")
-public class CustomerEntity {
+@Table(name = "item")
+
+public class ItemEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    private String email;
-    private String address;
+    private Integer rental;
+    private Integer fine;
+    private String availability;
+
+
 
 
 }
